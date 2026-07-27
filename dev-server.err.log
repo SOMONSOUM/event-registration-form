@@ -1,0 +1,216 @@
+⚠ Slow filesystem detected. The benchmark took 991ms. If D:\Workspace\NestJS\attendance-app\event-registration-form\.next/dev is a network drive, consider moving it to a local folder.
+See more: https://nextjs.org/docs/app/guides/local-development
+Persisting failed: Unable to write SST file 00000222.sst
+
+Caused by:
+    The system cannot find the path specified. (os error 3)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+
+thread 'tokio-runtime-worker' (11332) panicked at turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:225:17:
+Failed to restore task data (corrupted database or bug): Data for batch of 2 tasks
+
+Caused by:
+    0: Looking up typed data for 2 tasks from database failed
+    1: Unable to open static sorted file referenced from 00000026.meta
+    2: Unable to open static sorted file 00000020.sst
+    3: Failed to open SST file D:\Workspace\NestJS\attendance-app\event-registration-form\.next\dev\cache/turbopack\v16.2.12\00000020.sst
+    4: The system cannot find the file specified. (os error 2)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+thread 'tokio-runtime-worker' (5952) panicked at turbopack\crates\turbo-persistence\src\static_sorted_file.rs:600:24:
+range start index 18446744073709547519 out of range for slice of length 419
+
+thread 'tokio-runtime-worker' (5744) panicked at turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:225:17:
+Failed to restore task data (corrupted database or bug): Data for batch of 2 tasks
+
+Caused by:
+    0: Looking up typed data for 2 tasks from database failed
+    1: Unable to open static sorted file referenced from 00000026.meta
+    2: Unable to open static sorted file 00000020.sst
+    3: Failed to open SST file D:\Workspace\NestJS\attendance-app\event-registration-form\.next\dev\cache/turbopack\v16.2.12\00000020.sst
+    4: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (9304) panicked at turbopack\crates\turbo-persistence\src\static_sorted_file.rs:600:24:
+range start index 18446744073709547519 out of range for slice of length 419
+
+thread 'tokio-runtime-worker' (15228) panicked at turbopack\crates\turbo-persistence\src\static_sorted_file.rs:600:24:
+range start index 18446744073709547519 out of range for slice of length 419
+
+thread 'tokio-runtime-worker' (9412) panicked at turbopack\crates\turbo-persistence\src\static_sorted_file.rs:609:36:
+range start index 18446744073709547160 out of range for slice of length 52
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+
+thread 'tokio-runtime-worker' (11332) panicked at turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:225:17:
+Failed to restore task data (corrupted database or bug): Data for batch of 3 tasks
+
+Caused by:
+    0: Looking up typed data for 3 tasks from database failed
+    1: Unable to open static sorted file referenced from 00000107.meta
+    2: Unable to open static sorted file 00000102.sst
+    3: Failed to open SST file D:\Workspace\NestJS\attendance-app\event-registration-form\.next\dev\cache/turbopack\v16.2.12\00000102.sst
+    4: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (11332) panicked at turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:225:17:
+Failed to restore task data (corrupted database or bug): Data for batch of 2 tasks
+
+Caused by:
+    0: Looking up typed data for 2 tasks from database failed
+    1: Unable to open static sorted file referenced from 00000107.meta
+    2: Unable to open static sorted file 00000102.sst
+    3: Failed to open SST file D:\Workspace\NestJS\attendance-app\event-registration-form\.next\dev\cache/turbopack\v16.2.12\00000102.sst
+    4: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (5744) panicked at turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:225:17:
+Failed to restore task data (corrupted database or bug): Data for batch of 4 tasks
+
+Caused by:
+    0: Looking up typed data for 4 tasks from database failed
+    1: Invalid block type
+
+thread 'tokio-runtime-worker' (5744) panicked at turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:225:17:
+Failed to restore task data (corrupted database or bug): Data for batch of 2 tasks
+
+Caused by:
+    0: Looking up typed data for 2 tasks from database failed
+    1: Invalid block type
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+
+thread 'tokio-runtime-worker' (5744) panicked at turbopack\crates\turbo-persistence\src\static_sorted_file.rs:630:22:
+range start index 117713665 out of range for slice of length 1636
+
+-----
+[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to C:\Users\Moc_PC\AppData\Local\Temp\next-panic-f255656faf3dac041a384879635a6088.log.
+
+To help make Turbopack better, report this error by clicking here: https://bugs.nextjs.org/search?category=turbopack-error-report&title=Turbopack%20Error%3A%20range%20start%20index%20117713665%20out%20of%20range%20for%20slice%20of%20length%201636&body=Turbopack%20version%3A%20%60v16.2.12%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0Arange%20start%20index%20117713665%20out%20of%20range%20for%20slice%20of%20length%201636%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
+-----
+
+
+thread 'tokio-runtime-worker' (5952) panicked at turbopack\crates\turbo-persistence\src\static_sorted_file.rs:600:24:
+range start index 43859 out of range for slice of length 43847
+
+thread 'tokio-runtime-worker' (15228) panicked at turbopack\crates\turbo-persistence\src\static_sorted_file.rs:600:24:
+range start index 43859 out of range for slice of length 43847
+
+-----
+[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to C:\Users\Moc_PC\AppData\Local\Temp\next-panic-f255656faf3dac041a384879635a6088.log.
+
+To help make Turbopack better, report this error by clicking here: https://bugs.nextjs.org/search?category=turbopack-error-report&title=Turbopack%20Error%3A%20range%20start%20index%2043859%20out%20of%20range%20for%20slice%20of%20length%2043847&body=Turbopack%20version%3A%20%60v16.2.12%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0Arange%20start%20index%2043859%20out%20of%20range%20for%20slice%20of%20length%2043847%0A%0ADebug%20info%3A%0A-%20Execution%20of%20get_written_endpoint_with_issues_operation%20failed%0A-%20range%20start%20index%2043859%20out%20of%20range%20for%20slice%20of%20length%2043847%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
+-----
+
+⨯ Error [TurbopackInternalError]: range start index 43859 out of range for slice of length 43847
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- range start index 43859 out of range for slice of length 43847
+    at <unknown> (TurbopackInternalError: range start index 43859 out of range for slice of length 43847) {
+  location: 'turbopack\\crates\\turbo-persistence\\src\\static_sorted_file.rs:600:24'
+}
+Error [TurbopackInternalError]: range start index 117713665 out of range for slice of length 1636
+    at <unknown> (TurbopackInternalError: range start index 117713665 out of range for slice of length 1636) {
+  location: 'turbopack\\crates\\turbo-persistence\\src\\static_sorted_file.rs:630:22'
+}
+⨯ Error [TurbopackInternalError]: range start index 43859 out of range for slice of length 43847
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- range start index 43859 out of range for slice of length 43847
+    at <unknown> (TurbopackInternalError: range start index 43859 out of range for slice of length 43847) {
+  location: 'turbopack\\crates\\turbo-persistence\\src\\static_sorted_file.rs:600:24'
+}
+Error [TurbopackInternalError]: range start index 43859 out of range for slice of length 43847
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- range start index 43859 out of range for slice of length 43847
+    at <unknown> (TurbopackInternalError: range start index 43859 out of range for slice of length 43847) {
+  location: 'turbopack\\crates\\turbo-persistence\\src\\static_sorted_file.rs:600:24'
+}
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+
+thread 'tokio-runtime-worker' (9304) panicked at turbopack\crates\turbo-persistence\src\static_sorted_file.rs:600:24:
+range start index 18446744073709547519 out of range for slice of length 419
+
+thread 'tokio-runtime-worker' (9304) panicked at turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:225:17:
+Failed to restore task data (corrupted database or bug): Data for batch of 2 tasks
+
+Caused by:
+    0: Looking up typed data for 2 tasks from database failed
+    1: Unable to open static sorted file referenced from 00000026.meta
+    2: Unable to open static sorted file 00000020.sst
+    3: Failed to open SST file D:\Workspace\NestJS\attendance-app\event-registration-form\.next\dev\cache/turbopack\v16.2.12\00000020.sst
+    4: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (9304) panicked at turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:225:17:
+Failed to restore task data (corrupted database or bug): Data for batch of 2 tasks
+
+Caused by:
+    0: Looking up typed data for 2 tasks from database failed
+    1: Unable to open static sorted file referenced from 00000026.meta
+    2: Unable to open static sorted file 00000020.sst
+    3: Failed to open SST file D:\Workspace\NestJS\attendance-app\event-registration-form\.next\dev\cache/turbopack\v16.2.12\00000020.sst
+    4: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (5952) panicked at turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:225:17:
+Failed to restore task data (corrupted database or bug): Data for batch of 4 tasks
+
+Caused by:
+    0: Looking up typed data for 4 tasks from database failed
+    1: Unable to open static sorted file referenced from 00000026.meta
+    2: Unable to open static sorted file 00000020.sst
+    3: Failed to open SST file D:\Workspace\NestJS\attendance-app\event-registration-form\.next\dev\cache/turbopack\v16.2.12\00000020.sst
+    4: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (6720) panicked at turbopack\crates\turbo-persistence\src\static_sorted_file.rs:600:24:
+range start index 18446744073709547519 out of range for slice of length 419
+
+thread 'tokio-runtime-worker' (6720) panicked at turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:225:17:
+Failed to restore task data (corrupted database or bug): Data for batch of 2 tasks
+
+Caused by:
+    0: Looking up typed data for 2 tasks from database failed
+    1: Unable to open static sorted file referenced from 00000026.meta
+    2: Unable to open static sorted file 00000020.sst
+    3: Failed to open SST file D:\Workspace\NestJS\attendance-app\event-registration-form\.next\dev\cache/turbopack\v16.2.12\00000020.sst
+    4: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (5952) panicked at turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:225:17:
+Failed to restore task data (corrupted database or bug): Data for batch of 2 tasks
+
+Caused by:
+    0: Looking up typed data for 2 tasks from database failed
+    1: Unable to open static sorted file referenced from 00000026.meta
+    2: Unable to open static sorted file 00000020.sst
+    3: Failed to open SST file D:\Workspace\NestJS\attendance-app\event-registration-form\.next\dev\cache/turbopack\v16.2.12\00000020.sst
+    4: The system cannot find the file specified. (os error 2)
+
+thread 'tokio-runtime-worker' (11332) panicked at turbopack\crates\turbo-tasks-backend\src\backend\operation\mod.rs:225:17:
+Failed to restore task data (corrupted database or bug): Data for batch of 4 tasks
+
+Caused by:
+    0: Looking up typed data for 4 tasks from database failed
+    1: Unable to open static sorted file referenced from 00000026.meta
+    2: Unable to open static sorted file 00000020.sst
+    3: Failed to open SST file D:\Workspace\NestJS\attendance-app\event-registration-form\.next\dev\cache/turbopack\v16.2.12\00000020.sst
+    4: The system cannot find the file specified. (os error 2)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
