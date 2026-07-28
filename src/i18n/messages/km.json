@@ -1,0 +1,93 @@
+{
+  "registration": {
+    "eyebrow": "ការធ្វើសន្ធានកម្ម API ព្រឹត្តិការណ៍",
+    "title": "ចុះឈ្មោះអ្នកចូលរួម",
+    "description": "ចុះឈ្មោះអ្នកចូលរួមតាម API សាធារណៈរបស់ QR ព្រឹត្តិការណ៍។ ទំព័រនេះប្រើកូដ QR ព្រឹត្តិការណ៍/ទីតាំងដែលបានកំណត់ ហើយផ្ញើតែព័ត៌មានអ្នកចូលរួមក្នុង request body។",
+    "form": {
+      "title": "ទម្រង់ចុះឈ្មោះ",
+      "description": "វាលដែលត្រូវការ ត្រូវគ្នាជាមួយកិច្ចសន្យាចុះឈ្មោះសាធារណៈដែលប្រើក្នុងទំព័រស្កេន QR ព្រឹត្តិការណ៍។"
+    },
+    "fields": {
+      "fullNameKm": "ឈ្មោះពេញ (ខ្មែរ)",
+      "fullNameEn": "ឈ្មោះពេញ (អង់គ្លេស)",
+      "gender": "ភេទ",
+      "title": "ងារ",
+      "position": "តួនាទី",
+      "organization": "អង្គភាព / ស្ថាប័ន",
+      "phoneNumber": "លេខទូរស័ព្ទ",
+      "email": "អ៊ីមែល",
+      "deliveryMethod": "វិធីទទួល QR",
+      "profileImageUrl": "URL រូបថត"
+    },
+    "placeholders": {
+      "fullNameKm": "ឈ្មោះពេញ (ខ្មែរ)",
+      "fullNameEn": "ឈ្មោះពេញ (អង់គ្លេស)",
+      "title": "លោក, លោកស្រី, បណ្ឌិត",
+      "position": "ឧ. នាយក",
+      "organization": "ឈ្មោះពេញរបស់អង្គភាព",
+      "phoneNumber": "+855 -- --- ---",
+      "email": "attendee@example.com",
+      "profileImageUrl": "https://example.com/profile.jpg"
+    },
+    "options": {
+      "gender": {
+        "male": "ប្រុស",
+        "female": "ស្រី",
+        "other": "ផ្សេងៗ"
+      },
+      "delivery": {
+        "download": "ទាញយកកាត QR",
+        "telegram": "តំណ Telegram bot",
+        "email": "ផ្ញើទៅអ៊ីមែល"
+      }
+    },
+    "actions": {
+      "submit": "ចុះឈ្មោះអ្នកចូលរួម",
+      "submitting": "កំពុងចុះឈ្មោះ...",
+      "toggleTheme": "ប្តូររបៀបងងឹត/ភ្លឺ",
+      "switchLanguage": "ប្តូរភាសា"
+    },
+    "validation": {
+      "fullNameKm": "ត្រូវបញ្ចូលឈ្មោះពេញជាខ្មែរ។",
+      "fullNameEn": "ត្រូវបញ្ចូលឈ្មោះពេញជាអង់គ្លេស។",
+      "position": "ត្រូវបញ្ចូលតួនាទី។",
+      "organization": "ត្រូវបញ្ចូលអង្គភាព។",
+      "phoneNumber": "លេខទូរស័ព្ទត្រូវមានយ៉ាងហោចណាស់ ៨ ខ្ទង់។",
+      "email": "សូមបញ្ចូលអ៊ីមែលត្រឹមត្រូវ។",
+      "emailRequired": "ត្រូវបញ្ចូលអ៊ីមែល ប្រសិនបើជ្រើសវិធីផ្ញើតាមអ៊ីមែល។",
+      "profileImageUrl": "សូមប្រើ URL រូបថតត្រឹមត្រូវ។"
+    },
+    "messages": {
+      "failed": "ចុះឈ្មោះមិនបានសម្រេច។ សូមព្យាយាមម្តងទៀត។"
+    },
+    "deliveryGuide": {
+      "download": {
+        "title": "ទាញយក",
+        "text": "API នឹងត្រឡប់រូបភាព QR គុណភាពខ្ពស់។ សូមបង្ហាញការមើលជាមុន និងផ្តល់តំណទាញយករូបភាព QR ដោយផ្ទាល់។"
+      },
+      "telegram": {
+        "title": "Telegram",
+        "text": "API អាចត្រឡប់ URL របស់ Telegram bot។ បើកតំណនេះ ដើម្បីឱ្យអ្នកចូលរួមភ្ជាប់ការទទួល QR។"
+      },
+      "email": {
+        "title": "អ៊ីមែល",
+        "text": "API ផ្ញើ QR/card ទៅអ៊ីមែលអ្នកចូលរួម ហើយត្រឡប់ស្ថានភាពផ្ញើអ៊ីមែល។"
+      }
+    },
+    "result": {
+      "emptyTitle": "ចម្លើយពី API",
+      "emptyDescription": "បន្ទាប់ពីចុះឈ្មោះ ព័ត៌មានទទួល QR នឹងបង្ហាញនៅទីនេះ។",
+      "completeTitle": "ចុះឈ្មោះរួចរាល់",
+      "registrationId": "លេខសម្គាល់ចុះឈ្មោះ",
+      "checkInCode": "កូដ Check-in",
+      "delivery": "ការទទួល",
+      "status": "ស្ថានភាព",
+      "download": "ទាញយកកាត QR",
+      "telegram": "បើក Telegram bot",
+      "telegramPending": "បានស្នើទទួលតាម Telegram។ API មិនបានត្រឡប់តំណ bot ក្នុង response នេះទេ។",
+      "emailSent": "កាត QR ត្រូវបានផ្ញើទៅអ៊ីមែលអ្នកចូលរួម។",
+      "emailPending": "បានស្នើទទួលតាមអ៊ីមែល។ សូមពិនិត្យស្ថានភាពផ្ញើពី API ខាងលើ។",
+      "qrAlt": "កូដ QR របស់ {name}"
+    }
+  }
+}

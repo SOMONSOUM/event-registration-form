@@ -1,0 +1,93 @@
+{
+  "registration": {
+    "eyebrow": "Event API Integration",
+    "title": "Complete attendee registration",
+    "description": "Register attendees through the public event QR API. The page uses the configured event/place QR code and sends only attendee fields in the request body.",
+    "form": {
+      "title": "Registration form",
+      "description": "Required fields match the public registration contract used by the event QR scan page."
+    },
+    "fields": {
+      "fullNameKm": "Full name (Khmer)",
+      "fullNameEn": "Full name (English)",
+      "gender": "Gender",
+      "title": "Title",
+      "position": "Position",
+      "organization": "Organization / Institution",
+      "phoneNumber": "Phone number",
+      "email": "Email",
+      "deliveryMethod": "Delivery method",
+      "profileImageUrl": "Profile image URL"
+    },
+    "placeholders": {
+      "fullNameKm": "Full name (Khmer)",
+      "fullNameEn": "Full name (English)",
+      "title": "Mr., Ms., Dr.",
+      "position": "e.g. Director",
+      "organization": "Full name of organization",
+      "phoneNumber": "+855 -- --- ---",
+      "email": "attendee@example.com",
+      "profileImageUrl": "https://example.com/profile.jpg"
+    },
+    "options": {
+      "gender": {
+        "male": "Male",
+        "female": "Female",
+        "other": "Other"
+      },
+      "delivery": {
+        "download": "Download QR card",
+        "telegram": "Telegram bot link",
+        "email": "Send to email"
+      }
+    },
+    "actions": {
+      "submit": "Register attendee",
+      "submitting": "Registering...",
+      "toggleTheme": "Toggle dark and light mode",
+      "switchLanguage": "Switch language"
+    },
+    "validation": {
+      "fullNameKm": "Khmer full name is required.",
+      "fullNameEn": "English full name is required.",
+      "position": "Position is required.",
+      "organization": "Organization is required.",
+      "phoneNumber": "Phone number must be at least 8 digits.",
+      "email": "Enter a valid email.",
+      "emailRequired": "Email is required when delivery method is email.",
+      "profileImageUrl": "Use a valid profile image URL."
+    },
+    "messages": {
+      "failed": "Registration failed. Please try again."
+    },
+    "deliveryGuide": {
+      "download": {
+        "title": "Download",
+        "text": "The API returns the high quality QR image. Show the QR preview and provide a direct image download."
+      },
+      "telegram": {
+        "title": "Telegram",
+        "text": "The API can return a Telegram bot URL. Open it so the attendee can link their QR delivery."
+      },
+      "email": {
+        "title": "Email",
+        "text": "The API sends the QR/card to the attendee email and returns email delivery status."
+      }
+    },
+    "result": {
+      "emptyTitle": "API response",
+      "emptyDescription": "After registration, QR delivery details will appear here.",
+      "completeTitle": "Registration complete",
+      "registrationId": "Registration ID",
+      "checkInCode": "Check-in code",
+      "delivery": "Delivery",
+      "status": "Status",
+      "download": "Download QR card",
+      "telegram": "Open Telegram bot",
+      "telegramPending": "Telegram delivery was requested. The API did not return a bot link in this response.",
+      "emailSent": "The QR card was sent to the attendee email.",
+      "emailPending": "Email delivery was requested. Check the API delivery status above.",
+      "qrAlt": "{name} QR code"
+    }
+  }
+}

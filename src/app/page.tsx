@@ -1,19 +1,5 @@
-import { RegistrationForm } from "@/components/registration-form";
+import { redirect } from "@/i18n/navigation";
 
-export default function Home({
-  searchParams,
-}: {
-  searchParams?: Promise<{ code?: string }>;
-}) {
-  return <RegistrationFormShell searchParams={searchParams} />;
-}
-
-async function RegistrationFormShell({
-  searchParams,
-}: {
-  searchParams?: Promise<{ code?: string }>;
-}) {
-  const params = await searchParams;
-
-  return <RegistrationForm initialQrCode={params?.code ?? ""} />;
+export default function Home() {
+  redirect({ href: "/", locale: "km" });
 }
