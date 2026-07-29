@@ -115,7 +115,7 @@ function ResultCard({
           <img
             src={qrImage}
             alt={t("qrAlt", { name: result.fullNameEn })}
-            className="mx-auto size-64 rounded-md border bg-white p-3"
+            className="mx-auto size-64 bg-white"
           />
         ) : null}
 

@@ -12,6 +12,8 @@ export type RegistrationPayload = {
   email?: string;
   deliveryMethod?: DeliveryMethod;
   profileImageUrl?: string;
+  latitude?: number;
+  longitude?: number;
 };
 
 export type RegistrationResult = {

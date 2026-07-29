@@ -31,6 +31,8 @@ export const useRegistrationFormController = () => {
   const [form, setForm] = useState<RegistrationFormState>(initialForm);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [result, setResult] = useState<RegistrationResult | null>(null);
+  const [pendingLocationRetry, setPendingLocationRetry] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const schema = useMemo(
     () =>
@@ -76,6 +78,7 @@ export const useRegistrationFormController = () => {
   const submit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setResult(null);
+    setSubmitError(null);
 
     const parsed = schema.safeParse(form);
     if (!parsed.success) {
@@ -91,11 +94,32 @@ export const useRegistrationFormController = () => {
     }
 
     setErrors({});
+    setPendingLocationRetry(false);
 
     try {
       setResult(await registerMutation.mutateAsync(parsed.data));
-    } catch {
-      // Error message is rendered from the mutation state.
+    } catch (error) {
+      const message = apiErrorMessage(error, t("messages.failed"));
+      if (!isLocationRequiredError(message)) {
+        setSubmitError(message);
+        return;
+      }
+
+      setPendingLocationRetry(true);
+      registerMutation.reset();
+      try {
+        const coordinates = await getCurrentCoordinates();
+        setResult(
+          await registerMutation.mutateAsync({
+            ...parsed.data,
+            ...coordinates,
+          }),
+        );
+      } catch (retryError) {
+        setSubmitError(apiErrorMessage(retryError, t("messages.failed")));
+      } finally {
+        setPendingLocationRetry(false);
+      }
     }
   };
 
@@ -105,9 +129,37 @@ export const useRegistrationFormController = () => {
     result,
     submit,
     update,
-    errorMessage: registerMutation.error
-      ? apiErrorMessage(registerMutation.error, t("messages.failed"))
-      : null,
-    isSubmitting: registerMutation.isPending,
+    errorMessage: result
+      ? null
+      : submitError ||
+        (registerMutation.error && !pendingLocationRetry
+          ? apiErrorMessage(registerMutation.error, t("messages.failed"))
+          : null),
+    isSubmitting: registerMutation.isPending || pendingLocationRetry,
   };
 };
+
+function isLocationRequiredError(message: string) {
+  return /location/i.test(message);
+}
+
+function getCurrentCoordinates() {
+  return new Promise<{ latitude: number; longitude: number }>(
+    (resolve, reject) => {
+      if (!navigator.geolocation) {
+        reject(new Error("Location is not supported by this browser."));
+        return;
+      }
+
+      navigator.geolocation.getCurrentPosition(
+        (position) =>
+          resolve({
+            latitude: position.coords.latitude,
+            longitude: position.coords.longitude,
+          }),
+        () => reject(new Error("Unable to read current location.")),
+        { enableHighAccuracy: true, maximumAge: 30_000, timeout: 10_000 },
+      );
+    },
+  );
+}

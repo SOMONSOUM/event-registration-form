@@ -4,7 +4,7 @@ import {
   type RegistrationResult,
 } from "../types/registration.type";
 
-const EVENT_QR_CODE = "RGQ-oQpHQf_2kQcJp9pFos9_";
+const EVENT_QR_CODE = "qr_EQqZlqeqgTe826BqV3VjTA";
 export const registrationEndpointPath = () => {
   return `/attendance/qr/${EVENT_QR_CODE}/register`;
 };
@@ -29,5 +29,7 @@ const cleanPayload = (payload: RegistrationPayload) => {
     email: payload.email?.trim() || undefined,
     deliveryMethod: payload.deliveryMethod || "download",
     profileImageUrl: payload.profileImageUrl?.trim() || undefined,
+    latitude: payload.latitude,
+    longitude: payload.longitude,
   };
 };
