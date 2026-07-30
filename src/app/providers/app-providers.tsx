@@ -2,7 +2,6 @@
 
 import { NextIntlClientProvider } from "next-intl";
 import { type Locale } from "@/i18n/routing";
-import { AppearanceProvider } from "./appearance-provider";
 import { QueryProvider } from "./query-provider";
 
 export const AppProviders = ({
@@ -16,9 +15,7 @@ export const AppProviders = ({
 }) => {
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
-      <AppearanceProvider>
-        <QueryProvider>{children}</QueryProvider>
-      </AppearanceProvider>
+      <QueryProvider>{children}</QueryProvider>
     </NextIntlClientProvider>
   );
 };

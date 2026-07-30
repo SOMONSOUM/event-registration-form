@@ -1,7 +1,7 @@
 "use client";
 
 import { ThemeProvider, useTheme } from "next-themes";
-import { type ReactNode } from "react";
+import { useSyncExternalStore, type ReactNode } from "react";
 
 export type AppearanceMode = "light" | "dark" | "system";
 
@@ -21,10 +21,12 @@ export const AppearanceProvider = ({ children }: { children: ReactNode }) => {
 
 export const useAppearance = () => {
   const { theme, resolvedTheme, setTheme } = useTheme();
+  const mounted = useMounted();
 
   return {
-    theme: isAppearanceMode(theme) ? theme : "system",
-    resolvedTheme: isResolvedTheme(resolvedTheme) ? resolvedTheme : "light",
+    theme: mounted && isAppearanceMode(theme) ? theme : "system",
+    resolvedTheme:
+      mounted && isResolvedTheme(resolvedTheme) ? resolvedTheme : "light",
     setTheme: (nextTheme: AppearanceMode) => setTheme(nextTheme),
   };
 };
@@ -39,4 +41,16 @@ const isResolvedTheme = (
   value: string | undefined,
 ): value is "light" | "dark" => {
   return value === "light" || value === "dark";
+};
+
+const subscribe = () => () => {};
+const getMountedSnapshot = () => true;
+const getServerSnapshot = () => false;
+
+const useMounted = () => {
+  return useSyncExternalStore(
+    subscribe,
+    getMountedSnapshot,
+    getServerSnapshot,
+  );
 };

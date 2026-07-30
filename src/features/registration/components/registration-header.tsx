@@ -1,16 +1,14 @@
 "use client";
 
-import { useLocale, useTranslations } from "next-intl";
-import { Languages, Moon, Sun } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useAppearance } from "@/app/providers/appearance-provider";
-import { Link } from "@/i18n/navigation";
+import { LanguageSwitcher } from "./language-switcher";
 
 export const RegistrationHeader = () => {
   const t = useTranslations("registration");
-  const locale = useLocale();
   const { resolvedTheme, setTheme } = useAppearance();
-  const nextLocale = locale === "km" ? "en" : "km";
 
   return (
     <header className="flex flex-wrap items-start justify-between gap-4 border-b pb-5">
@@ -40,15 +38,7 @@ export const RegistrationHeader = () => {
             <Moon className="size-4" />
           )}
         </Button>
-        <Button asChild variant="outline" size="icon">
-          <Link
-            href="/"
-            locale={nextLocale}
-            aria-label={t("actions.switchLanguage")}
-          >
-            <Languages className="size-4" />
-          </Link>
-        </Button>
+        <LanguageSwitcher />
       </div>
     </header>
   );

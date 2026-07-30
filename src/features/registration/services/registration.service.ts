@@ -4,7 +4,7 @@ import {
   type RegistrationResult,
 } from "../types/registration.type";
 
-const EVENT_QR_CODE = "qr_EQqZlqeqgTe826BqV3VjTA";
+const EVENT_QR_CODE = "ZFtHdvJdrE47DT8k55F8vOaX";
 export const registrationEndpointPath = () => {
   return `/attendance/qr/${EVENT_QR_CODE}/register`;
 };
